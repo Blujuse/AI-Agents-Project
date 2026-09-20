@@ -1,0 +1,173 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7855903211386539128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c47a0b769432054799eb35c92e55dd2, type: 3}
+  m_Name: KiwiRepeatNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 0bab92c2d86f8bc4696d732d1a601a03
+  position: {x: 95.99999, y: 238.99997}
+  blackboard:
+    walkingGrid: {fileID: 0}
+    agentObj: {fileID: 0}
+    senseZone: {fileID: 0}
+  description: 
+  child: {fileID: 7254648210735069932}
+--- !u!114 &-5483486426797945929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6dc2289fabe4eb488078ce822a690e3, type: 3}
+  m_Name: KiwiRootNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: ba963c9a471dfc44095c517c78cffe71
+  position: {x: 2, y: -7}
+  blackboard:
+    walkingGrid: {fileID: 0}
+    agentObj: {fileID: 0}
+    senseZone: {fileID: 0}
+  description: 
+  child: {fileID: -19268002585599904}
+--- !u!114 &-19268002585599904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f64aec8092f14f4fa4c65855d15995a, type: 3}
+  m_Name: SelectorNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 65add8d3e6e7a574bb9de1cbc1d2835d
+  position: {x: 2, y: 113}
+  blackboard:
+    walkingGrid: {fileID: 0}
+    agentObj: {fileID: 0}
+    senseZone: {fileID: 0}
+  description: 
+  children:
+  - {fileID: 3130093217762507183}
+  - {fileID: -7855903211386539128}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe405ff8596f49f4c9013a4210fdb84b, type: 3}
+  m_Name: BugVBT
+  m_EditorClassIdentifier: 
+  rootNode: {fileID: -5483486426797945929}
+  treeState: 0
+  nodes:
+  - {fileID: -5483486426797945929}
+  - {fileID: 7254648210735069932}
+  - {fileID: 1190258681474606163}
+  - {fileID: -7855903211386539128}
+  - {fileID: 3130093217762507183}
+  - {fileID: -19268002585599904}
+  blackboard:
+    walkingGrid: {fileID: 0}
+    agentObj: {fileID: 0}
+    senseZone: {fileID: 0}
+--- !u!114 &1190258681474606163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91a7b18aacad15d4c9c96d196a2a6457, type: 3}
+  m_Name: BugAvoidNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 303890b4f2997d34195e404956461db8
+  position: {x: -114, y: 345}
+  blackboard:
+    walkingGrid: {fileID: 0}
+    agentObj: {fileID: 0}
+    senseZone: {fileID: 0}
+  description: 
+  agent: {fileID: 0}
+--- !u!114 &3130093217762507183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b193e2c4181e284f9985e3eb4e9b8ff, type: 3}
+  m_Name: NearbyAnimalNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 01e5693143f2f7d48ac5deff7ed2821d
+  position: {x: -130, y: 239}
+  blackboard:
+    walkingGrid: {fileID: 0}
+    agentObj: {fileID: 0}
+    senseZone: {fileID: 0}
+  description: 
+  child: {fileID: 1190258681474606163}
+  animalLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  senseZone: {fileID: 0}
+  results:
+  - {fileID: 0}
+--- !u!114 &7254648210735069932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 645075c4812349e4daf17d9ef9ea960a, type: 3}
+  m_Name: BugMovementNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: ec5f1e1a4f038f04485bbbdc96735b01
+  position: {x: 85.99999, y: 344.99997}
+  blackboard:
+    walkingGrid: {fileID: 0}
+    agentObj: {fileID: 0}
+    senseZone: {fileID: 0}
+  description: 
+  speed: 5
+  turnSpeed: 3
+  turnDist: 5
+  stoppingDist: 1
+  minPathUpdateTime: 0.2
+  walkingGrid: {fileID: 0}
+  agentObj: {fileID: 0}

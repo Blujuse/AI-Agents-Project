@@ -1,0 +1,24 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <Style src="project://database/Assets/Scripts/UIBehaviourTree/UI/KiwiBehaviourTreeEditor.uss?fileID=7433441132597879392&amp;guid=e1f619e340bb277428d511878f3c74c1&amp;type=3#KiwiBehaviourTreeEditor" />
+    <uie:Toolbar>
+        <uie:ToolbarMenu text="Assets" />
+    </uie:Toolbar>
+    <KiwiSplitView fixed-pane-initial-dimension="210" style="color: rgb(51, 51, 51);">
+        <ui:VisualElement name="left_panel" style="flex-grow: 1; background-color: rgb(51, 51, 51);">
+            <KiwiSplitView orientation="Vertical" fixed-pane-initial-dimension="290">
+                <ui:VisualElement name="inspector-container" style="flex-grow: 1;">
+                    <KiwiInspectorView />
+                    <ui:Label text="Inspector" style="background-color: rgb(37, 37, 37); color: rgb(255, 255, 255);" />
+                </ui:VisualElement>
+                <ui:VisualElement name="blackboard-container" style="flex-grow: 1;">
+                    <ui:Label text="Blackboard&#10;" style="background-color: rgb(37, 37, 37); color: rgb(255, 255, 255);" />
+                    <ui:IMGUIContainer />
+                </ui:VisualElement>
+            </KiwiSplitView>
+        </ui:VisualElement>
+        <ui:VisualElement name="right-panel" style="flex-grow: 1; background-color: rgb(51, 51, 51);">
+            <ui:Label text="Label" style="background-color: rgb(37, 37, 37); color: rgb(255, 255, 255);" />
+            <KiwiBehaviourTreeView focusable="true" style="flex-grow: 1;" />
+        </ui:VisualElement>
+    </KiwiSplitView>
+</ui:UXML>

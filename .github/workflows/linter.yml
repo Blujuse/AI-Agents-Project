@@ -1,0 +1,28 @@
+name: Linter
+
+# Controls when action will run, triggers on push and pull requests, only for master branch though
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v5
+      with:
+        # super-linter needs the full git history to get the
+        # list of files that changed across commits
+        fetch-depth: 0
+        persist-credentials: false
+    - name: Super-Linter
+      uses: super-linter/super-linter@v7.1.0
+      env:
+        VALIDATE_CSHARP: true
+        DISABLE_ERRORS: true  # turns linting failures into warnings
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
